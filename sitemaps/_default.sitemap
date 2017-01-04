@@ -1,5 +1,5 @@
-sitemap default label="Main Menu" {
-	Frame label="Test" {
+sitemap _default label="Main Menu" {
+	Frame label="Lys" {
 		Switch item=sonoff_1_state
 		Switch item=pow_state
 		Text item=pow_power {
@@ -18,8 +18,8 @@ sitemap default label="Main Menu" {
 		}
 	}
 	Frame label="Tv" {
-		Text item=TvStue_Control
-		Dimmer item=TvStue_Volume
+		Default item=TvStue_Control
+		Slider item=TvStue_Volume
 	}
         Frame label="MediaCenter" {
                         Text label="Stuen" icon="xbmc" {

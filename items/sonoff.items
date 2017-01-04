@@ -1,0 +1,7 @@
+Switch 	pow_state 	"Julelys"		(gLights)  	{mqtt=">[mosquitto:cmnd/sonoff/power:command:*:default],<[mosquitto:stat/sonoff/POWER:state:default],<[mosquitto:tele/sonoff/POWER:state:default],<[mosquitto:stat/sonoff/1/POWER:state:default]", autoupdate="false"}
+Number 	pow_volt 	"pow volt [%s]" 	(gChart)	{mqtt="<[mosquitto:tele/sonoff/VOLTAGE:state:default]"}
+Number 	pow_current 	"pow current [%s]" 	(gChart)	{mqtt="<[mosquitto:tele/sonoff/CURRENT:state:default]"}
+Number 	pow_power 	"pow power [%s]" 	(gChart)	{mqtt="<[mosquitto:tele/sonoff/CURRENT_POWER:state:default]"}
+Number 	pow_rssi 	"pow rssi [%s]" 	(gChart)	{mqtt="<[mosquitto:tele/sonoff/RSSI:state:default]"}
+
+Switch 	sonoff_1_state	"Sonoff 1"		(gLights)	{mqtt=">[mosquitto:cmnd/relay/power:command:*:default],<[mosquitto:stat/relay/POWER:state:default],<[mosquitto:tele/relay/POWER:state:default]", autoupdate="false"}

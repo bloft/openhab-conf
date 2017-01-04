@@ -10,10 +10,12 @@ Group gCorridor		"Gang"		(gIndoor)
 Group gBio		"Hjemmebio"	(gIndoor)
 Group gSkur		"Skur"		(gOutdore)
 
-Group:Number:AVG		gTemperature
-Group:Number:AVG		gHumidity
-Group:Number:AVG		gLightLevel
-Group:Contact:OR(OPEN, CLOSED)	gMotion
-Group:Switch:OR(ON, OFF)	gLights
+Group gChart
+
+Group:Number:AVG		gTemp		(gChart)
+Group:Number:AVG		gHum		(gChart)
+Group:Number:AVG		gLightLevel	(gChart)
+Group:Contact:OR(OPEN, CLOSED)	gMotion		(gChart)
+Group:Switch:OR(ON, OFF)	gLights		(gChart)
 
 DateTime                Date                    "Date [%1$tA, %1$td.%1$tm.%1$tY]"       <calendar>      { ntp="" }
