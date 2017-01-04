@@ -1,0 +1,19 @@
+Group gAll
+Group gOutdoor				(gAll)
+Group gIndoor				(gAll)
+Group gOffice		"Kontor"	(gIndoor)
+Group gKitchen		"Køkken"	(gIndoor)
+Group gLiving		"Stue"		(gIndoor)
+Group gBed		"Soveværelse"	(gIndoor)
+Group gToilet		"Toilet"	(gIndoor)
+Group gCorridor		"Gang"		(gIndoor)
+Group gBio		"Hjemmebio"	(gIndoor)
+Group gSkur		"Skur"		(gOutdore)
+
+Group:Number:AVG		gTemperature
+Group:Number:AVG		gHumidity
+Group:Number:AVG		gLightLevel
+Group:Contact:OR(OPEN, CLOSED)	gMotion
+Group:Switch:OR(ON, OFF)	gLights
+
+DateTime                Date                    "Date [%1$tA, %1$td.%1$tm.%1$tY]"       <calendar>      { ntp="" }

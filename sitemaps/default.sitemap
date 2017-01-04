@@ -1,0 +1,56 @@
+sitemap default label="Main Menu" {
+	Frame label="Test" {
+		Switch item=sonoff_1_state
+		Switch item=pow_state
+		Text item=pow_power {
+			Text item=pow_power {
+				Chart item=pow_power period=D
+			}
+			Text item=pow_volt {
+				Chart item=pow_volt period=D
+			}
+			Text item=pow_current {
+				Chart item=pow_current period=D
+			}
+			Text item=pow_rssi {
+				Chart item=pow_rssi period=D
+			}
+		}
+	}
+	Frame label="Tv" {
+		Text item=TvStue_Control
+		Dimmer item=TvStue_Volume
+	}
+        Frame label="MediaCenter" {
+                        Text label="Stuen" icon="xbmc" {
+                                Switch item=XbmcLiving_Power label="Host"
+                                Text item=XbmcLiving_State label="State [%s]" visibility=[XbmcLiving_Power==ON]
+                                Text item=XbmcLiving_Type label="Type [%s]" visibility=[XbmcLiving_State==Play, XbmcLiving_State==Pause]
+                                Text item=XbmcLiving_ShowTitle label="Show [%s]" visibility=[XbmcLiving_Type==episode]
+                                Text item=XbmcLiving_Artist label="Artist [%s]" visibility=[XbmcLiving_Type==song]
+                                Text item=XbmcLiving_Album label="Album [%s]" visibility=[XbmcLiving_Type==song]
+                                Image item=XbmcLiving_Fanart label="Fanart [%s]" visibility=[XbmcLiving_Type==song]
+                                Text item=XbmcLiving_Title label="Title [%s]" visibility=[XbmcLiving_State==Play, XbmcLiving_State==Pause]
+			}
+                        Text label="Hjemmebio" icon="xbmc" {
+                                Switch item=XbmcBio_Power label="Host"
+                                Text item=XbmcBio_State label="State [%s]" visibility=[XbmcBio_Power==ON]
+                                Text item=XbmcBio_Type label="Type [%s]" visibility=[XbmcBio_State==Play, XbmcBio_State==Pause]
+                                Text item=XbmcBio_ShowTitle label="Show [%s]" visibility=[XbmcBio_Type==episode]
+                                Text item=XbmcBio_Artist label="Artist [%s]" visibility=[XbmcBio_Type==song]
+                                Text item=XbmcBio_Album label="Album [%s]" visibility=[XbmcBio_Type==song]
+                                Image item=XbmcBio_Fanart label="Fanart [%s]" visibility=[XbmcBio_Type==song]
+                                Text item=XbmcBio_Title label="Title [%s]" visibility=[XbmcBio_State==Play, XbmcBio_State==Pause]
+                        }
+                        Text label="Soveværelse" icon="xbmc" {
+                                Switch item=XbmcSove_Power label="Host"
+                                Text item=XbmcSove_State label="State [%s]" visibility=[XbmcSove_Power==ON]
+                                Text item=XbmcSove_Type label="Type [%s]" visibility=[XbmcSove_State==Play, XbmcBio_State==Pause]
+                                Text item=XbmcSove_ShowTitle label="Show [%s]" visibility=[XbmcSove_Type==episode]
+                                Text item=XbmcSove_Artist label="Artist [%s]" visibility=[XbmcSove_Type==song]
+                                Text item=XbmcSove_Album label="Album [%s]" visibility=[XbmcSove_Type==song]
+                                Image item=XbmcSove_Fanart label="Fanart [%s]" visibility=[XbmcSove_Type==song]
+                                Text item=XbmcSove_Title label="Title [%s]" visibility=[XbmcSove_State==Play, XbmcSove_State==Pause]
+                        }
+                }
+}

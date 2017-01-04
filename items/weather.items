@@ -1,0 +1,5 @@
+String sunsetTime "Sunset [%s]" <clock> (gWeather)
+String sunriseTime "Sunrise [%s]" <clock> (gWeather)
+
+String strSunset { http="<[http://api.yr.no/weatherapi/sunrise/1.1/?lat=55.855824;lon=9.846555;date=%1$tF:21600000:XSLT(weather_yr_sunset.xsl)]" }
+String strSunrise { http="<[http://api.yr.no/weatherapi/sunrise/1.1/?lat=55.855824;lon=9.846555;date=%1$tF:21600000:XSLT(weather_yr_sunrise.xsl)]" }
