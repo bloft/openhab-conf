@@ -1,21 +1,23 @@
 Group gAll
-Group gOutdoor				(gAll)
-Group gIndoor				(gAll)
-Group gOffice		"Kontor"	(gIndoor)
-Group gKitchen		"Køkken"	(gIndoor)
-Group gLiving		"Stue"		(gIndoor)
-Group gBed		"Soveværelse"	(gIndoor)
-Group gToilet		"Toilet"	(gIndoor)
-Group gCorridor		"Gang"		(gIndoor)
-Group gBio		"Hjemmebio"	(gIndoor)
-Group gSkur		"Skur"		(gOutdore)
+Group gOutdoor								(gAll)
+Group gIndoor									(gAll)
+Group gOffice		"Kontor"			(gIndoor)
+Group gKitchen	"Køkken"			(gIndoor)
+Group gLiving		"Stue"				(gIndoor)
+Group gBed			"Soveværelse"	(gIndoor)
+Group gToilet		"Toilet"			(gIndoor)
+Group gCorridor	"Gang"				(gIndoor)
+Group gBio			"Hjemmebio"		(gIndoor)
+Group gSkur			"Skur"				(gOutdore)
+Group gGarage		"Garage"			(gOutdore)
 
 Group gChart
 
-Group:Number:AVG		gTemp		(gChart)
-Group:Number:AVG		gHum		(gChart)
-Group:Number:AVG		gLightLevel	(gChart)
-Group:Contact:OR(OPEN, CLOSED)	gMotion		(gChart)
-Group:Switch:OR(ON, OFF)	gLights		(gChart)
+Group 													gRssi			"WiFi Signal"	(gChart)
+Group:Number:AVG								gTemp										(gChart)
+Group:Number:AVG								gHum										(gChart)
+Group:Number:AVG								gLightLevel							(gChart)
+Group:Contact:OR(OPEN, CLOSED)	gMotion									(gChart)
+Group:Switch:OR(ON, OFF)				gLights									(gChart)
 
 DateTime                Date                    "Date [%1$tA, %1$td.%1$tm.%1$tY]"       <calendar>      { ntp="" }

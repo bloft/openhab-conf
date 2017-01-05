@@ -1,28 +1,28 @@
 sitemap _default label="Main Menu" {
-	Frame label="Lys" {
-		Switch item=sonoff_1_state
-		Text item=sonoff_1_rssi {
-			Chart item=sonoff_1_rssi period=W
-		}
-		Switch item=pow_state
-		Text item=pow_power {
-			Text item=pow_power {
-				Chart item=pow_power period=W
-			}
-			Text item=pow_volt {
-				Chart item=pow_volt period=W
-			}
-			Text item=pow_current {
-				Chart item=pow_current period=W
-			}
-			Text item=pow_rssi {
-				Chart item=pow_rssi period=W
-			}
-		}
+	Frame label="Weather" {
+		Text item="Sunrise_Time"
+		Text item="Sunset_Time"
 	}
-	Frame label="Tv" {
-		Default item=TvStue_Control
-		Slider item=TvStue_Volume
+	Frame label="Lys" {
+		Switch item=sonoff_2_state
+		Text item=sonoff_2_rssi {
+			Chart item=sonoff_2_rssi period=W
+		}
+		Switch item=sonoff_1_state
+		Text item=sonoff_1_power {
+			Text item=sonoff_1_power {
+				Chart item=sonoff_1_power period=W
+			}
+			Text item=sonoff_1_volt {
+				Chart item=sonoff_1_volt period=W
+			}
+			Text item=sonoff_1_current {
+				Chart item=sonoff_1_current period=W
+			}
+			Text item=sonoff_1_rssi {
+				Chart item=sonoff_1_rssi period=W
+			}
+		}
 	}
         Frame label="MediaCenter" {
                         Text label="Stuen" icon="xbmc" {
