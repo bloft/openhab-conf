@@ -1,87 +1,15 @@
-import org.openhab.core.library.types.*
-import org.openhab.model.script.actions.*
-
-import java.lang.Math
-import java.util.Calendar
-import java.util.Date
-import java.util.TimeZone
-import java.text.SimpleDateFormat
-
-import org.joda.time.*
-import org.joda.time.format.DateTimeFormat
-import org.joda.time.format.DateTimeFormatter
-
-var Timer tSunriseTimer
-var Timer tSunsetTimer
-
-rule "React to sunrise"
-	when 
-		Item strSunrise changed
-	then
-		logDebug("Sunrise", String::format("Sunrise before time: %s", strSunrise.state))
-		var DateTime sunrise = parse(strSunrise.state.toString)
-		sunrise = sunrise.withZone(DateTimeZone::getDefault)
-
-		sunriseTime.postUpdate(String::format("%1$02d:%2$02d:%3$02d", sunrise.getHourOfDay, sunrise.getMinuteOfHour, sunrise.getSecondOfMinute))
-
-		logInfo("Sunrise", "Sunrise time: " + sunrise)
-
-		if(tSunriseTimer!=null) {
-			logInfo("Sunset","Timer tSunriseTimer cancelled")
-			tSunriseTimer.cancel()
-		}
-		if(sunrise.beforeNow) {
-			logDebug("Sunrise","Sunrise is before now")
-		} else {
-			logDebug("Sunrise","Sunrise is after now")
-			logInfo("Sunrise","Timer tSunriseTimer created")
-			tSunriseTimer = createTimer(sunrise.plusMinutes(15)) [|
-				logInfo("Sunrise","Timer tSunriseTimer executed")
-				sendCommand(pow_state, OFF)
-				logInfo("Sunrise","Timer tSunriseTimer executed - Done")
-			]
-		}
-end
-
-rule "React to sunset"
-	when 
-		Item strSunset changed
-	then
-		logDebug("Sunset", String::format("Sunset before time: %s", strSunset.state))
-		var DateTime sunset = parse(strSunset.state.toString)
-		sunset = sunset.withZone(DateTimeZone::getDefault)
-
-		sunsetTime.postUpdate(String::format("%1$02d:%2$02d:%3$02d", sunset.getHourOfDay,sunset.getMinuteOfHour,sunset.getSecondOfMinute))
-
-		logInfo("Sunset", "Sunset time: " + sunset)
-
-		if(tSunsetTimer!=null) {
-			logInfo("Sunset","Timer tSunsetTimer cancelled")
-			tSunsetTimer.cancel()
-		}
-		if(sunset.beforeNow) {
-			logDebug("Sunset","Sunset is before now")
-		} else {
-			logDebug("Sunset","Sunset is after now")
-			logInfo("Sunset","Timer tSunsetTimer created")
-			tSunsetTimer = createTimer(sunset.minusMinutes(15)) [|
-				logInfo("Sunset","Timer tSunsetTimer executed")
-				sendCommand(pow_state, ON)
-				logInfo("Sunset","Timer tSunsetTimer executed - Done")
-			]
-		}
-end
-
-rule "Night Off" 
+rule "Sunrise"
 	when
+		Item Sunrise_Event received update ON or
 		Time cron "0 0 1 * * ?"
 	then
-		sendCommand(pow_state, OFF)
+		sendCommand(sonoff_1_state, OFF)
 end
 
-rule "Night On" 
+rule "Sunset"
 	when
+		Item Sunset_Event received update ON or
 		Time cron "0 0 5 * * ?"
 	then
-		sendCommand(pow_state, ON)
+		sendCommand(sonoff_1_state, ON)
 end
