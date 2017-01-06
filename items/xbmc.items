@@ -1,19 +1,17 @@
-Group media (All)
+Switch	XbmcLiving_Power	"Living Power [%s]"		<reciever>	{ xbmc=">[#living|System.Shutdown]", wol="192.168.1.255#90:fb:a6:2c:94:7d", nh="192.168.1.5" }
+String	XbmcLiving_State	"Living State [%s]"			{ xbmc="<[#living|Player.State]" }
+Switch	XbmcLiving_ScreenSaver	"Living Screen Saver"		{ xbmc="<[#living|Screensaver.State]" }
+String	XbmcLiving_Type		"Living Type [%s]"		{ xbmc="<[#living|Player.Type]" }
+String	XbmcLiving_Title	"Living Title [%s]"		{ xbmc="<[#living|Player.Title]" }
+String	XbmcLiving_ShowTitle	"Living Show [%s]"		{ xbmc="<[#living|Player.ShowTitle]" }
+String	XbmcLiving_Fanart	"Living Fanart [%s]"		{ xbmc="<[#living|Player.Fanart]" }
+String	XbmcLiving_Artist	"Living Artist [%s]"		{ xbmc="<[#living|Player.Artist]" }
+String	XbmcLiving_Album	"Living Album [%s]"		{ xbmc="<[#living|Player.Album]" }
+Switch	XbmcLiving_PlayPause	"Living Play/Pause"		{ xbmc=">[#living|Player.PlayPause]", autoupdate="false" }
+Switch	XbmcLiving_Stop		"Living Stop"			{ xbmc=">[#living|Player.Stop]", autoupdate="false" }
+String	XbmcLiving_Notify	"Living Notify [%s]"		{ xbmc="<[#living|GUI.ShowNotification]", autoupdate="false" }
 
-Switch	XbmcLiving_Power	"Living Power [%s]"	(media) { xbmc=">[#living|System.Shutdown]", wol="192.168.1.255#90:fb:a6:2c:94:7d", nh="192.168.1.5" }
-String	XbmcLiving_State	"Living State [%s]"	(media)	{ xbmc="<[#living|Player.State]" }
-Switch	XbmcLiving_ScreenSaver	"Living Screen Saver"	(media)	{ xbmc="<[#living|Screensaver.State]" }
-String	XbmcLiving_Type		"Living Type [%s]"	(media)	{ xbmc="<[#living|Player.Type]" }
-String	XbmcLiving_Title	"Living Title [%s]"	(media)	{ xbmc="<[#living|Player.Title]" }
-String	XbmcLiving_ShowTitle	"Living Show [%s]"	(media)	{ xbmc="<[#living|Player.ShowTitle]" }
-String	XbmcLiving_Fanart	"Living Fanart [%s]"	(media)	{ xbmc="<[#living|Player.Fanart]" }
-String	XbmcLiving_Artist	"Living Artist [%s]"	(media)	{ xbmc="<[#living|Player.Artist]" }
-String	XbmcLiving_Album	"Living Album [%s]"	(media)	{ xbmc="<[#living|Player.Album]" }
-Switch	XbmcLiving_PlayPause	"Living Play/Pause"	(media)	{ xbmc=">[#living|Player.PlayPause]", autoupdate="false" }
-Switch	XbmcLiving_Stop		"Living Stop"		(media)	{ xbmc=">[#living|Player.Stop]", autoupdate="false" }
-String	XbmcLiving_Notify	"Living Notify [%s]"	(media)	{ xbmc="<[#living|GUI.ShowNotification]", autoupdate="false" }
-
-Switch	XbmcBio_Power		"Bio Power [%s]"	{ xbmc=">[#bio|System.Shutdown]", wol="192.168.1.255#00:1f:d0:93:f8:b7", nh="192.168.1.37" }
+Switch	XbmcBio_Power		"Bio Power [%s]"	<reciever>	{ xbmc=">[#bio|System.Shutdown]", wol="192.168.1.255#00:1f:d0:93:f8:b7", nh="192.168.1.37" }
 String	XbmcBio_State		"Bio State [%s]"	{ xbmc="<[#bio|Player.State]" }
 Switch	XbmcBio_ScreenSaver	"Bio Screen Saver"	{ xbmc="<[#bio|Screensaver.State]" }
 String	XbmcBio_Type		"Bio Type [%s]"		{ xbmc="<[#bio|Player.Type]" }
@@ -26,7 +24,7 @@ Switch	XbmcBio_PlayPause	"Bio Play/Pause"	{ xbmc=">[#bio|Player.PlayPause]", aut
 Switch	XbmcBio_Stop		"Bio Stop"		{ xbmc=">[#bio|Player.Stop]", autoupdate="false" }
 String	XbmcBio_Notify		"Bio Notify [%s]"	{ xbmc="<[#bio|GUI.ShowNotification]", autoupdate="false" }
 
-Switch	XbmcSove_Power		"Sove Power [%s]"	{ xbmc=">[#sove|System.Shutdown]", wol="192.168.1.255#00:1f:d0:93:f8:b7", nh="192.168.1.234" }
+Switch	XbmcSove_Power		"Sove Power [%s]"	<reciever>	{ xbmc=">[#sove|System.Shutdown]", wol="192.168.1.255#00:1f:d0:93:f8:b7", nh="192.168.1.234" }
 String	XbmcSove_State		"Sove State [%s]"	{ xbmc="<[#sove|Player.State]" }
 Switch	XbmcSove_ScreenSaver	"Sove Screen Saver"	{ xbmc="<[#sove|Screensaver.State]" }
 String	XbmcSove_Type		"Sove Type [%s]"	{ xbmc="<[#sove|Player.Type]" }

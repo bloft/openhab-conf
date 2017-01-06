@@ -12,12 +12,13 @@ Group gSkur			"Skur"				(gOutdore)
 Group gGarage		"Garage"			(gOutdore)
 
 Group gChart
+Group gSensor		"Sensors"			(gChart)
 
 Group 													gRssi			"WiFi Signal"	(gChart)
-Group:Number:AVG								gTemp										(gChart)
-Group:Number:AVG								gHum										(gChart)
-Group:Number:AVG								gLightLevel							(gChart)
-Group:Contact:OR(OPEN, CLOSED)	gMotion									(gChart)
 Group:Switch:OR(ON, OFF)				gLights									(gChart)
+Group:Number:AVG								gTemp										<temperature>	(gSensor)
+Group:Number:AVG								gHum										<humidity>		(gSensor)
+Group:Number:AVG								gLightLevel							(gSensor)
+Group:Contact:OR(OPEN, CLOSED)	gMotion									(gSensor)
 
 DateTime                Date                    "Date [%1$tA, %1$td.%1$tm.%1$tY]"       <calendar>      { ntp="" }

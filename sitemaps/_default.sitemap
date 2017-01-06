@@ -1,7 +1,7 @@
 sitemap _default label="Main Menu" {
 	Frame label="Weather" {
-		Text item="Sunrise_Time"
-		Text item="Sunset_Time"
+		Text item=Sunrise_Time
+		Text item=Sunset_Time
 	}
 	Frame label="Lys" {
 		Switch item=sonoff_2_state
@@ -25,7 +25,7 @@ sitemap _default label="Main Menu" {
 		}
 	}
         Frame label="MediaCenter" {
-                        Text label="Stuen" icon="xbmc" {
+                        Text label="Stuen" icon="receiver" {
                                 Switch item=XbmcLiving_Power label="Host"
                                 Text item=XbmcLiving_State label="State [%s]" visibility=[XbmcLiving_Power==ON]
                                 Text item=XbmcLiving_Type label="Type [%s]" visibility=[XbmcLiving_State==Play, XbmcLiving_State==Pause]
@@ -35,7 +35,7 @@ sitemap _default label="Main Menu" {
                                 Image item=XbmcLiving_Fanart label="Fanart [%s]" visibility=[XbmcLiving_Type==song]
                                 Text item=XbmcLiving_Title label="Title [%s]" visibility=[XbmcLiving_State==Play, XbmcLiving_State==Pause]
 			}
-                        Text label="Hjemmebio" icon="xbmc" {
+                        Text label="Hjemmebio" icon="receiver" {
                                 Switch item=XbmcBio_Power label="Host"
                                 Text item=XbmcBio_State label="State [%s]" visibility=[XbmcBio_Power==ON]
                                 Text item=XbmcBio_Type label="Type [%s]" visibility=[XbmcBio_State==Play, XbmcBio_State==Pause]
@@ -45,7 +45,7 @@ sitemap _default label="Main Menu" {
                                 Image item=XbmcBio_Fanart label="Fanart [%s]" visibility=[XbmcBio_Type==song]
                                 Text item=XbmcBio_Title label="Title [%s]" visibility=[XbmcBio_State==Play, XbmcBio_State==Pause]
                         }
-                        Text label="Soveværelse" icon="xbmc" {
+                        Text label="Soveværelse" icon="receiver" {
                                 Switch item=XbmcSove_Power label="Host"
                                 Text item=XbmcSove_State label="State [%s]" visibility=[XbmcSove_Power==ON]
                                 Text item=XbmcSove_Type label="Type [%s]" visibility=[XbmcSove_State==Play, XbmcBio_State==Pause]
