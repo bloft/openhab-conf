@@ -1,0 +1,4 @@
+Player	Kodi_Stue_Player		{channel="Kodi:Kodi:stue:control"}
+Dimmer	Kodi_Stue_Volume		{channel="Kodi:Kodi:stue:volume"}
+Switch	Kodi_Stue_Mute			{channel="Kodi:Kodi:stue:mute"}
+String	Kodi_Stue_Title			{channel="Kodi:Kodi:stue:title"}

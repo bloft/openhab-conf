@@ -1,4 +1,4 @@
-Switch	XbmcLiving_Power	"Living Power [%s]"		<reciever>	{ xbmc=">[#living|System.Shutdown]", wol="192.168.1.255#90:fb:a6:2c:94:7d", nh="192.168.1.5" }
+Switch	XbmcLiving_Power	"Living Power [%s]"		<television>	{ xbmc=">[#living|System.Shutdown]", wol="192.168.1.255#90:fb:a6:2c:94:7d", nh="192.168.1.5" }
 String	XbmcLiving_State	"Living State [%s]"			{ xbmc="<[#living|Player.State]" }
 Switch	XbmcLiving_ScreenSaver	"Living Screen Saver"		{ xbmc="<[#living|Screensaver.State]" }
 String	XbmcLiving_Type		"Living Type [%s]"		{ xbmc="<[#living|Player.Type]" }
