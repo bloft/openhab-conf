@@ -1,1 +1,3 @@
-Kodi:Kodi:stue [ipAddress="192.168.1.5", port="9090"]
+kodi:kodi:stue [ ipAddress="192.168.1.5", port="9090" ]
+kodi:kodi:bio [ ipAddress="192.168.1.37", port="9090" ]
+kodi:kodi:sove [ ipAddress="192.168.1.234", port="9090" ]

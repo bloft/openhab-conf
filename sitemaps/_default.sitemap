@@ -24,6 +24,12 @@ sitemap _default label="Main Menu" {
 			}
 		}
 	}
+	Frame label="Kodi" {
+		Default item=Kodi_Stue_Player
+		Slider item=Kodi_Stue_Volume
+		Switch item=Kodi_Stue_Mute
+		Text item=Kodi_Stue_Title
+	}
         Frame label="MediaCenter" {
                         Text label="Stuen" icon="receiver" {
                                 Switch item=XbmcLiving_Power label="Host"
