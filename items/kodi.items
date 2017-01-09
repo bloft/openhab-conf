@@ -1,14 +1,14 @@
 Player	Kodi_Stue_Player	<television>	{channel="kodi:kodi:stue:control"}
 Dimmer	Kodi_Stue_Volume	<soundvolume>	{channel="kodi:kodi:stue:volume"}
 Switch	Kodi_Stue_Mute		<soundvolume>	{channel="kodi:kodi:stue:mute"}
-String	Kodi_Stue_Title		<text>		{channel="kodi:kodi:stue:title"}
+String	Kodi_Stue_Title		<text>				{channel="kodi:kodi:stue:title"}
 
-Player	Kodi_Bio_Player			{channel="kodi:kodi:bio:control"}
-Dimmer	Kodi_Bio_Volume			{channel="kodi:kodi:bio:volume"}
-Switch	Kodi_Bio_Mute			{channel="kodi:kodi:bio:mute"}
-String	Kodi_Bio_Title			{channel="kodi:kodi:bio:title"}
+Player	Kodi_Bio_Player		<television>	{channel="kodi:kodi:bio:control"}
+Dimmer	Kodi_Bio_Volume		<soundvolume>	{channel="kodi:kodi:bio:volume"}
+Switch	Kodi_Bio_Mute			<soundvolume>	{channel="kodi:kodi:bio:mute"}
+String	Kodi_Bio_Title		<text>				{channel="kodi:kodi:bio:title"}
 
-Player	Kodi_Sove_Player		{channel="kodi:kodi:sove:control"}
-Dimmer	Kodi_Sove_Volume		{channel="kodi:kodi:sove:volume"}
-Switch	Kodi_Sove_Mute			{channel="kodi:kodi:sove:mute"}
-String	Kodi_Sove_Title			{channel="kodi:kodi:sove:title"}
+Player	Kodi_Sove_Player	<television>	{channel="kodi:kodi:sove:control"}
+Dimmer	Kodi_Sove_Volume	<soundvolume>	{channel="kodi:kodi:sove:volume"}
+Switch	Kodi_Sove_Mute		<soundvolume>	{channel="kodi:kodi:sove:mute"}
+String	Kodi_Sove_Title		<text>				{channel="kodi:kodi:sove:title"}

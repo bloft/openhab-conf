@@ -1,6 +1,6 @@
 rule "Sunrise"
 	when
-		Item Sunrise_Event received update ON or
+		Channel 'astro:sun:home:rise#event' triggered START or
 		Time cron "0 0 1 * * ?"
 	then
 		sendCommand(sonoff_1_state, OFF)
@@ -8,7 +8,7 @@ end
 
 rule "Sunset"
 	when
-		Item Sunset_Event received update ON or
+		Channel 'astro:sun:home:set#event' triggered END or
 		Time cron "0 0 5 * * ?"
 	then
 		sendCommand(sonoff_1_state, ON)

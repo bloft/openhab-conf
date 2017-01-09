@@ -2,7 +2,7 @@ Switch	sonoff_1_state		"Julelys"						<light>				(gLights)  		{mqtt=">[broker:cm
 Number	sonoff_1_volt			"volt [%s]" 				<energy>			(gChart)			{mqtt="<[broker:tele/sonoff1/VOLTAGE:state:default]"}
 Number	sonoff_1_current	"current [%s]"	 		<energy>			(gChart)			{mqtt="<[broker:tele/sonoff1/CURRENT:state:default]"}
 Number	sonoff_1_power		"power [%s]" 				<energy>			(gChart)			{mqtt="<[broker:tele/sonoff1/CURRENT_POWER:state:default]"}
-Number	sonoff_1_rssi			"rssi [%s]" 				<network>			(gChart)			{mqtt="<[broker:tele/sonoff1/RSSI:state:default]"}
+Number	sonoff_1_rssi			"Sonoff 1 [%s]" 		<network>			(gRssi)				{mqtt="<[broker:tele/sonoff1/RSSI:state:default]"}
 
 Switch	sonoff_2_state		"Sonoff 2"					<poweroutlet>	(gLights)			{mqtt=">[broker:cmnd/sonoff2/power:command:*:default],<[broker:stat/sonoff2/POWER:state:default],<[broker:tele/sonoff2/POWER:state:default]", autoupdate="false"}
-Number	sonoff_2_rssi 		"rssi [%s]"					<network>			(gChart)			{mqtt="<[broker:tele/sonoff2/RSSI:state:default]"}
+Number	sonoff_2_rssi 		"Sonoff 2 [%s]"			<network>			(gRssi)				{mqtt="<[broker:tele/sonoff2/RSSI:state:default]"}

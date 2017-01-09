@@ -5,9 +5,6 @@ sitemap _default label="Main Menu" {
 	}
 	Frame label="Lys" {
 		Switch item=sonoff_2_state
-		Text item=sonoff_2_rssi {
-			Chart item=sonoff_2_rssi period=W
-		}
 		Switch item=sonoff_1_state
 		Text item=sonoff_1_power {
 			Text item=sonoff_1_power {
@@ -19,16 +16,26 @@ sitemap _default label="Main Menu" {
 			Text item=sonoff_1_current {
 				Chart item=sonoff_1_current period=W
 			}
-			Text item=sonoff_1_rssi {
-				Chart item=sonoff_1_rssi period=W
-			}
 		}
+		Group item=gRssi
 	}
-	Frame label="Kodi" {
+	Frame label="Kodi Stuen" {
 		Default item=Kodi_Stue_Player
 		Slider item=Kodi_Stue_Volume
 		Switch item=Kodi_Stue_Mute
 		Text item=Kodi_Stue_Title
+	}
+	Frame label="Kodi Hjemmebiografen" {
+		Default item=Kodi_Bio_Player
+		Slider item=Kodi_Bio_Volume
+		Switch item=Kodi_Bio_Mute
+		Text item=Kodi_Bio_Title
+	}
+	Frame label="Kodi Soveværelse" {
+		Default item=Kodi_Sove_Player
+		Slider item=Kodi_Sove_Volume
+		Switch item=Kodi_Sove_Mute
+		Text item=Kodi_Sove_Title
 	}
         Frame label="MediaCenter" {
                         Text label="Stuen" icon="receiver" {

@@ -1,12 +1,2 @@
-// https://github.com/openhab/openhab/wiki/Astro-binding
-
-// shows the sunrise
-DateTime Sunrise_Time  "Sunrise [%1$tH:%1$tM]"	<sunrise>		{astro="planet=sun, type=rise, property=start"}
-DateTime Sunset_Time   "Sunset [%1$tH:%1$tM]"   <sunset>		{astro="planet=sun, type=set, property=end"}
-
-// schedules a event which starts 10 minutes AFTER sunrise
-Switch Sunrise_Event   {astro="planet=sun, type=rise, property=start, offset=10"}
-
-// schedules a event which starts 10 minutes BEFORE sunset
-Switch Sunset_Event    {astro="planet=sun, type=set, property=end, offset=-10"}
-
+DateTime Sunrise_Time		"Sunrise [%1$tH:%1$tM]"	<sunrise>		{ channel="astro:sun:home:rise#start" }
+DateTime Sunset_Time		"Sunset [%1$tH:%1$tM]"	<sunset>		{ channel="astro:sun:home:set#start" }
