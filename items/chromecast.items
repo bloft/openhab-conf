@@ -1,0 +1,6 @@
+Dimmer CCKitchenVolume { channel="chromecast:audio:Kitchen:volume" }
+Player CCKitchenPlayer { channel="chromecast:audio:Kitchen:control" }
+
+Dimmer CCStuenVolume { channel="chromecast:chromecast:Stuen:volume" }
+Player CCStuenPlayer { channel="chromecast:chromecast:Stuen:control" }
+

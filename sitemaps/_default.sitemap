@@ -21,6 +21,14 @@ sitemap _default label="Main Menu" {
 		Group item=gRssi
 		Image  url="/rrdchart.png?groups=gRssi&period=W&random=1&h=500&w=1200" refresh=1000
 	}
+	Frame label="Chromecast Stuen" {
+		Default item=CCStuenPlayer
+		Default item=CCStuenVolume
+	}
+	Frame label="Chromecast Køkken" {
+		Default item=CCKitchenPlayer
+		Default item=CCKitchenVolume
+	}
 	Frame label="Kodi Stuen" {
 		Default item=Kodi_Stue_Player
 		Slider item=Kodi_Stue_Volume
