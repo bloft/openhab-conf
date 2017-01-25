@@ -21,6 +21,11 @@ sitemap _default label="Main Menu" {
 		Group item=gRssi
 		Image  url="/rrdchart.png?groups=gRssi&period=W&random=1&h=500&w=1200" refresh=1000
 	}
+	Frame label="test" {
+		Text item=homie_sensor_hum
+		Text item=homie_sensor_temp
+		Text item=homie_sensor_signal
+	}
 	Frame label="Chromecast Stuen" {
 		Default item=CCStuenPlayer
 		Default item=CCStuenVolume
