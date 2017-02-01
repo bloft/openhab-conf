@@ -1,0 +1,7 @@
+rule "color to rgb"
+	when
+		Item homie_sensor_color changed
+	then
+		var hsbValue = homie_sensor_color.state as HSBType
+		sendCommand(homie_sensor_rgb, hsbValue.red.intValue + "," + hsbValue.green.intValue + "," + hsbValue.blue.intValue)
+end

@@ -25,6 +25,7 @@ sitemap _default label="Main Menu" {
 		Text item=homie_sensor_hum
 		Text item=homie_sensor_temp
 		Text item=homie_sensor_signal
+		Colorpicker item=homie_sensor_color
 	}
 	Frame label="Chromecast Stuen" {
 		Default item=CCStuenPlayer
