@@ -22,9 +22,16 @@ sitemap _default label="Main Menu" {
 		Image  url="/rrdchart.png?groups=gRssi&period=W&random=1&h=500&w=1200" refresh=1000
 	}
 	Frame label="test" {
-		Text item=homie_sensor_hum
-		Text item=homie_sensor_temp
-		Text item=homie_sensor_signal
+		Text item=homie_sensor_hum {
+			Chart item=homie_sensor_hum period=W
+		}
+		Text item=homie_sensor_temp {
+			Chart item=homie_sensor_temp period=W
+		}
+		Text item=homie_sensor_signal {
+			Chart item=homie_sensor_signal period=W
+		}
+		Switch item=homie_sensor_light
 		Colorpicker item=homie_sensor_color
 	}
 	Frame label="Chromecast Stuen" {

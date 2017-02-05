@@ -1,7 +1,29 @@
+import org.openhab.model.script.actions.Timer
+var Timer timer
+
 rule "color to rgb"
 	when
 		Item homie_sensor_color changed
 	then
 		var hsbValue = homie_sensor_color.state as HSBType
 		sendCommand(homie_sensor_rgb, hsbValue.red.intValue + "," + hsbValue.green.intValue + "," + hsbValue.blue.intValue)
+		
+		sendCommand(homie_sensor_light, ON)
+		timer = createTimer(now.plusSeconds(30)) [|
+			sendCommand(homie_sensor_light, OFF)
+		]
+end
+
+rule "Athena Morgen"
+	when
+		Time cron "0 0 6 * * ?"
+	then
+		sendCommand(homie_sensor_light, ON)
+end
+
+rule "Athena Aften"
+	when
+		Time cron "0 00 19 * * ?"
+	then
+		sendCommand(homie_sensor_light, OFF)
 end
