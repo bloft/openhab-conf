@@ -21,7 +21,7 @@ sitemap _default label="Main Menu" {
 		Group item=gRssi
 		Image  url="/rrdchart.png?groups=gRssi&period=W&random=1&h=500&w=1200" refresh=1000
 	}
-	Frame label="test" {
+	Frame label="Athena" {
 		Text item=homie_sensor_hum {
 			Chart item=homie_sensor_hum period=W
 		}
@@ -35,12 +35,12 @@ sitemap _default label="Main Menu" {
 		Colorpicker item=homie_sensor_color
 	}
 	Frame label="Chromecast Stuen" {
-		Default item=CCStuenPlayer
-		Default item=CCStuenVolume
+		Default item=chromecast_chromecast_stue_control
+		Default item=chromecast_chromecast_stue_volume
 	}
 	Frame label="Chromecast Køkken" {
-		Default item=CCKitchenPlayer
-		Default item=CCKitchenVolume
+		Default item=chromecast_audio_kitchen_control
+		Default item=chromecast_audio_kitchen_volume
 	}
 	Frame label="Kodi Stuen" {
 		Default item=Kodi_Stue_Player
