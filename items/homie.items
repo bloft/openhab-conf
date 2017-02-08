@@ -3,6 +3,6 @@ Number homie_sensor_hum  "humidity [%s %%Rh]"   <humidity>   (gChart)    {mqtt="
 Number homie_sensor_temp  "temperature [%s °C]"   <temperature>   (gChart)    {mqtt="<[broker:homie/5ccf7fd95bcd/temperature/value:state:default]"}
 Number homie_sensor_signal  "signal [%s %%]"   <network>   (gChart)    {mqtt="<[broker:homie/5ccf7fd95bcd/$stats/signal:state:default]"}
 
-Switch homit_sensor_light "light [%s]"      <light>      {mqtt=">[broker:homie/5ccf7fd95bcd/light/light/set:command:*:default]"}
+Switch homit_sensor_light "light [%s]"      <light>      {mqtt=">[broker:homie/5ccf7fd95bcd/light/state/set:command:*:default]"}
 Color homie_sensor_color  "color [%s %%]"   <slider>
-String homie_sensor_rgb  "color [%s %%]"   <slider>     {mqtt=">[broker:homie/5ccf7fd95bcd/light/color/set:command:*:default]"}
+String homie_sensor_rgb  "color [%s %%]" {mqtt=">[broker:homie/5ccf7fd95bcd/light/color/set:command:*:default]"}
