@@ -7,11 +7,17 @@ rule "color to rgb"
 	then
 		var hsbValue = homie_sensor_color.state as HSBType
 		sendCommand(homie_sensor_rgb, hsbValue.red.intValue + "," + hsbValue.green.intValue + "," + hsbValue.blue.intValue)
-		
-		sendCommand(homie_sensor_light, ON)
-		timer = createTimer(now.plusSeconds(30)) [|
-			sendCommand(homie_sensor_light, OFF)
-		]
+	
+		if(homie_sensor_light.state == OFF || timer!=null) {	
+			sendCommand(homie_sensor_light, ON)
+			if(timer!=null) {
+				timer .cancel
+				timer = null
+			}
+			timer = createTimer(now.plusSeconds(30)) [|
+				sendCommand(homie_sensor_light, OFF)
+			]
+		}
 end
 
 rule "Athena Morgen"
