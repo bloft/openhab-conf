@@ -43,12 +43,14 @@ sitemap _default label="Main Menu" {
 		Default item=chromecast_audio_kitchen_volume
 	}
 	Frame label="Kodi Stuen" {
+		Switch item=Kodi_Stue_Power
 		Default item=Kodi_Stue_Player
 		Slider item=Kodi_Stue_Volume
 		Switch item=Kodi_Stue_Mute
 		Text item=Kodi_Stue_Title
 	}
 	Frame label="Kodi Hjemmebiografen" {
+		Switch item=Kodi_Bio_Power
 		Default item=Kodi_Bio_Player
 		Slider item=Kodi_Bio_Volume
 		Switch item=Kodi_Bio_Mute
