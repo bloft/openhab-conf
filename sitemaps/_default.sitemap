@@ -9,27 +9,24 @@ sitemap _default label="Main Menu" {
 		Text item=sonoff_1_power {
 			Text item=sonoff_1_power {
 				Image  url="http://localhost:8085/rrdchart.png?items=sonoff_1_power&period=W&random=1&h=500&w=1200" refresh=1000
-				Chart item=sonoff_1_power period=W
 			}
 			Text item=sonoff_1_volt {
-				Chart item=sonoff_1_volt period=W
+				Image  url="http://localhost:8085/rrdchart.png?items=sonoff_1_volt&period=W&random=1&h=500&w=1200" refresh=1000
 			}
 			Text item=sonoff_1_current {
-				Chart item=sonoff_1_current period=W
+				Image  url="http://localhost:8085/rrdchart.png?items=sonoff_1_current&period=W&random=1&h=500&w=1200" refresh=1000
 			}
 		}
 		Group item=gRssi
-		Image  url="http://localhost:8085/rrdchart.png?groups=gRssi&period=W&random=1&h=500&w=1200" refresh=1000
 	}
 	Frame label="Athena" {
 		Text item=homie_sensor_hum {
+				Image  url="http://localhost:8085/rrdchart.png?items=item=homie_sensor_hum&period=W&random=1&h=500&w=1200" refresh=1000
 			Chart item=homie_sensor_hum period=W
 		}
 		Text item=homie_sensor_temp {
+				Image  url="http://localhost:8085/rrdchart.png?items=item=homie_sensor_temp&period=W&random=1&h=500&w=1200" refresh=1000
 			Chart item=homie_sensor_temp period=W
-		}
-		Text item=homie_sensor_signal {
-			Chart item=homie_sensor_signal period=W
 		}
 		Switch item=homie_sensor_light
 		Colorpicker item=homie_sensor_color
