@@ -4,7 +4,7 @@ Dimmer	Kodi_Stue_Volume	<soundvolume>	{ channel="kodi:kodi:stue:volume" }
 Switch	Kodi_Stue_Mute		<soundvolume>	{ channel="kodi:kodi:stue:mute" }
 String	Kodi_Stue_Title		<text>				{ channel="kodi:kodi:stue:title" }
 
-Switch	Kodi_Bio_Power		<reciever>		{ wol="192.168.1.255#00:1f:d0:93:f8:b7", nh="192.168.1.37" }
+Switch	Kodi_Bio_Power		<television>		{ wol="192.168.1.255#00:1f:d0:93:f8:b7", nh="192.168.1.37" }
 Player	Kodi_Bio_Player		<television>	{ channel="kodi:kodi:bio:control" }
 Dimmer	Kodi_Bio_Volume		<soundvolume>	{ channel="kodi:kodi:bio:volume" }
 Switch	Kodi_Bio_Mute			<soundvolume>	{ channel="kodi:kodi:bio:mute" }
