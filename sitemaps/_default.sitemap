@@ -32,12 +32,12 @@ sitemap _default label="Main Menu" {
 		Colorpicker item=homie_sensor_color
 	}
 	Frame label="Chromecast Stuen" {
-		Default item=chromecast_chromecast_stue_control
-		Default item=chromecast_chromecast_stue_volume
+		Default item=CCStuenPlayer
+		Default item=CCStuenVolume
 	}
 	Frame label="Chromecast Køkken" {
-		Default item=chromecast_audio_kitchen_control
-		Default item=chromecast_audio_kitchen_volume
+		Default item=CCKitchenPlayer
+		Default item=CCKitchenVolume
 	}
 	Frame label="Kodi Stuen" {
 		Switch item=Kodi_Stue_Power
